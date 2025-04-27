@@ -20,12 +20,6 @@
 *.old
 *.orig
 
-# Maven
-.mvn/
-!/.mvn/wrapper/maven-wrapper.jar
-mvnw
-mvnw.cmd
-
 ##############
 # IDE specific
 ##############
