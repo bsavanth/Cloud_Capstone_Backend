@@ -1,0 +1,177 @@
+##############
+# Java-related
+##############
+*.class
+*.jar
+*.war
+*.ear
+
+# Compiled source and build output
+/target/
+/bin/
+/out/
+
+# Temp files
+*.log
+*.tmp
+*.swp
+*.bak
+*.backup
+*.old
+*.orig
+
+# Maven
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+##############
+# IDE specific
+##############
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+.idea_modules/
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+.springBeans
+
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VSCode
+.vscode/
+
+##################
+# Operating system
+##################
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+####################
+# Environment/config
+####################
+
+# Spring Boot application properties
+src/main/resources/application.properties
+src/main/resources/application.yml
+src/main/resources/application-*.yml
+src/main/resources/application-*.properties
+
+# dotenv files
+.env
+.env.*
+
+# Local secrets
+secrets/
+config/
+
+##################
+# Testing/Reports
+##################
+/test-output/
+/surefire-reports/
+/failsafe-reports/
+/jacoco.exec
+/jacoco-report.html
+
+# Coverage reports
+/coverage/
+/cobertura/
+/site/coverage/
+
+################
+# Deployment
+################
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+k8s/*.yaml
+k8s/*.yml
+
+# Helm Charts
+charts/
+helm-release.yaml
+
+####################
+# Miscellaneous tools
+####################
+
+# SonarQube
+.sonar/
+/sonar-scanner/
+/report-task.txt
+
+# Checkstyle
+checkstyle-output.xml
+
+# PMD
+pmd.xml
+
+# FindBugs
+findbugs.xml
+
+# build tools
+build.log
+
+# Temporary files from editors or OS
+*.sublime-workspace
+*.sublime-project
+*.idea_modules
+*.swo
+*.swn
+
+# Yarn / Node / Frontend if mixed project
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+
+##########################
+# Backup / Database files
+##########################
+*.db
+*.sql
+*.sqlite
+*.h2.db
+*.mv.db
+*.trace.db
+*.log.db
+
+# Backup files
+*.bak
+*.tmp
+*.old
+
