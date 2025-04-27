@@ -1,18 +1,13 @@
 package kubecluster.productmanagementbackend.Service;
 
-import jakarta.annotation.PostConstruct;
 import kubecluster.productmanagementbackend.DAO.ProductCategoryRepository;
-import kubecluster.productmanagementbackend.DAO.ProductRepository;
-import kubecluster.productmanagementbackend.Model.Product;
 import kubecluster.productmanagementbackend.Model.ProductCategory;
 import kubecluster.productmanagementbackend.Model.ProductCategoryDTO;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service

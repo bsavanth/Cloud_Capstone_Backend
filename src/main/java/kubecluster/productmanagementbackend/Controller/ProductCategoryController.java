@@ -1,15 +1,11 @@
 package kubecluster.productmanagementbackend.Controller;
 
-import kubecluster.productmanagementbackend.Model.Product;
-import kubecluster.productmanagementbackend.Model.ProductCategory;
+
 import kubecluster.productmanagementbackend.Service.ProductCategoryService;
-import kubecluster.productmanagementbackend.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RequestMapping("/product-category")
 @RestController
