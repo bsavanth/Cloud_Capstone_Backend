@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>kubecluster</groupId>
-    <artifactId>Product-Management-Backend</artifactId>
+    <artifactId>Cloud_Capstone_Backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Product-Management-Backend</name>
     <description>Product-Management-Backend</description>
