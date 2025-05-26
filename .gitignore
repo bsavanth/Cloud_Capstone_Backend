@@ -103,11 +103,7 @@ config/
 # Deployment
 ################
 
-# Docker
-Dockerfile
-docker-compose.yml
-.dockerignore
-docker-compose.override.yml
+
 
 # Kubernetes
 k8s/*.yaml
