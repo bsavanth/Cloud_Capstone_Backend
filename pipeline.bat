@@ -32,8 +32,7 @@ echo [3/3] Running Docker container...
 REM Stop and remove existing container (if any)
 docker stop %CONTAINER_NAME% >nul 2>&1
 docker rm %CONTAINER_NAME% >nul 2>&1
-
-docker run -d -p %HOST_PORT%:%CONTAINER_PORT% --name %CONTAINER_NAME% %IMAGE_NAME%
+REM docker run -d -p %HOST_PORT%:%CONTAINER_PORT% --name %CONTAINER_NAME% %IMAGE_NAME%
 
 IF ERRORLEVEL 1 (
     echo Failed to run Docker container.

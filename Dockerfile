@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/Cloud_Capstone_Backend*.jar app.jar
 
 # Expose container port
-EXPOSE 80
+EXPOSE 8080
 
 # Run Spring Boot JAR
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]

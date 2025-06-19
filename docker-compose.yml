@@ -1,0 +1,13 @@
+version: "3"
+services:
+  backend:
+    image: 605383994027.dkr.ecr.us-east-2.amazonaws.com/cloud-capstone-backend-image:latest
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: 605383994027.dkr.ecr.us-east-2.amazonaws.com/cloud-capstone-frontend-image:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
