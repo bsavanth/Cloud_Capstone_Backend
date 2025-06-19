@@ -91,7 +91,8 @@ public class DataLoad {
                     new ProductCategory(null, "Toys & Games"),
                     new ProductCategory(null, "Automotive"),
                     new ProductCategory(null, "Garden & Outdoor"),
-                    new ProductCategory(null, "Health & Household")
+                    new ProductCategory(null, "Health & Household"),
+                    new ProductCategory(null, "Apple Products")
             );
 
             productCategoryRepository.saveAll(defaultCategories);
