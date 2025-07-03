@@ -8,13 +8,12 @@ import kubecluster.productmanagementbackend.Model.ProductCategory;
 import kubecluster.productmanagementbackend.Model.ProductDTO;
 import kubecluster.productmanagementbackend.Model.ProductCategoryDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ProductService {
@@ -29,10 +28,12 @@ public class ProductService {
             List<Product> products = productRepository.findAll();
             List<ProductDTO> productDTOs = new ArrayList<>();
 
+
+
             for (Product product : products) {
                 productDTOs.add(convertToDTO(product));
             }
-
+            productDTOs.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
             return ResponseEntity.ok(productDTOs);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -72,5 +73,40 @@ public class ProductService {
         }
         productDTO.setCategories(categoryDTOs);
         return productDTO;
+    }
+
+    public ResponseEntity<Object> sortedProducts(@RequestParam String order, String param) {
+        if((order == null) || (!order.equals("asc") && !order.equals("desc"))){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid order");
+        }
+        if((param == null) || (!param.equals("price") && !param.equals("name"))){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid params");
+        }
+        try {
+            List<Product> products = productRepository.findAll();
+            List<ProductDTO> productDTOs = new ArrayList<>();
+
+            for (Product product : products) {
+                productDTOs.add(convertToDTO(product));
+            }
+            Comparator<ProductDTO> comparator;
+
+            if (param.equalsIgnoreCase("price")) {
+                comparator = Comparator.comparing(ProductDTO::getPrice);
+            } else {
+                comparator = Comparator.comparing(p -> p.getName().toLowerCase());
+            }
+
+            if (order.equalsIgnoreCase("desc")) {
+                comparator = comparator.reversed();
+            }
+
+            productDTOs.sort(comparator);
+            return ResponseEntity.ok(productDTOs);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
     }
 }

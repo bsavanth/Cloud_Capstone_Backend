@@ -16,17 +16,17 @@ public class ProductManagementBackendApplication {
         SpringApplication.run(ProductManagementBackendApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner printAllBeans(ApplicationContext ctx) {
-        return args -> {
-            String[] beanNames = ctx.getBeanDefinitionNames();
-            Arrays.sort(beanNames); // Optional: Sort for readability
-            System.out.println("=== List of Beans Created by Spring Boot ===");
-            for (String beanName : beanNames) {
-                System.out.println(beanName);
-            }
-        };
-    }
+//    @Bean
+//    public CommandLineRunner printAllBeans(ApplicationContext ctx) {
+//        return args -> {
+//            String[] beanNames = ctx.getBeanDefinitionNames();
+//            Arrays.sort(beanNames); // Optional: Sort for readability
+//            System.out.println("=== List of Beans Created by Spring Boot ===");
+//            for (String beanName : beanNames) {
+//                System.out.println(beanName);
+//            }
+//        };
+//    }
 
 
 }
